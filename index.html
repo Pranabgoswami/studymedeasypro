@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STUDY MED EASY</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f8fa;
+    }
+
+    header {
+      background-color: #0b6fa4;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .unit {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .unit h2 {
+      margin-top: 0;
+      color: #0b6fa4;
+    }
+
+    .add-unit {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .add-unit button {
+      background-color: #0b6fa4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .add-unit button:hover {
+      background-color: #095c87;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    STUDY MED EASY
+  </header>
+
+  <div class="container">
+    <!-- Placeholder Unit Example -->
+    <div class="unit">
+      <h2>Unit 1: Introduction to Human Physiology</h2>
+      <p>Write content here for Unit 1. You can add diagrams, lists, and explanations related to this unit.</p>
+    </div>
+
+    <!-- Add more units by copying the block above -->
+
+    <div class="add-unit">
+      <button onclick="addNewUnit()">Add New Unit</button>
+    </div>
+  </div>
+
+  <script>
+    function addNewUnit() {
+      const container = document.querySelector('.container');
+      const newUnit = document.createElement('div');
+      newUnit.className = 'unit';
+      newUnit.innerHTML = `
+        <h2>New Unit Title</h2>
+        <p>Type your content here for the new unit...</p>
+      `;
+      container.insertBefore(newUnit, document.querySelector('.add-unit'));
+    }
+  </script>
+</body>
+</html>
